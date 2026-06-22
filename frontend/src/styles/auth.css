@@ -1,0 +1,168 @@
+
+/* FULL PAGE */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#020617;
+}
+
+/* MAIN CONTAINER */
+
+.authContainer{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#020617;
+    padding:20px;
+}
+
+/* LOGIN CARD */
+
+.authCard{
+    background:#111827 !important;
+    border-radius:20px !important;
+    padding:35px !important;
+    color:white !important;
+
+    box-shadow:
+    0 0 25px rgba(124,58,237,0.2) !important;
+
+    transition:0.3s ease !important;
+}
+
+.authCard:hover{
+    transform:translateY(-3px);
+}
+
+/* INSIDE BOX */
+
+.authBox{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+}
+
+/* TITLE */
+
+.authTitle{
+    color:white;
+    font-size:38px;
+    margin-bottom:5px;
+    font-weight:700;
+}
+
+/* SUBTITLE */
+
+.authSubtitle{
+    color:#94a3b8;
+    margin-bottom:25px;
+    font-size:15px;
+}
+
+/* TOP BUTTONS */
+
+.switchButtons{
+    display:flex;
+    gap:12px;
+    justify-content:center; align-items:center;
+    margin-bottom:20px;
+    width:100%;
+}
+.switchButtons button {
+    background:#7c3aed !important;
+    color:white !important;
+    
+}
+
+/* FORM */
+
+.authForm{
+    width:100%;
+}
+
+/* INPUT */
+
+.authForm .MuiOutlinedInput-root{
+    border-radius:12px;
+    color:white;
+}
+
+/* LABEL */
+
+.authForm .MuiInputLabel-root{
+    color:#94a3b8;
+}
+
+/* INPUT BORDER */
+
+.authForm .MuiOutlinedInput-notchedOutline{
+    border-color:#374151;
+}
+
+/* INPUT HOVER */
+
+.authForm .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{
+    border-color:#7c3aed;
+}
+
+/* INPUT FOCUS */
+
+.authForm .Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color:#7c3aed;
+}
+
+/* LOGIN BUTTON */
+
+.submitBtn{
+    margin-top:20px !important;
+
+    background:#7c3aed !important;
+
+    border-radius:12px !important;
+
+    padding:12px !important;
+
+    font-size:16px !important;
+
+    text-transform:none !important;
+
+    transition:0.3s ease !important;
+}
+
+.submitBtn:hover{
+    background:#6d28d9 !important;
+
+    box-shadow:
+    0 0 15px rgba(124,58,237,0.5);
+}
+
+/* ERROR */
+
+.errorText{
+    color:#ef4444;
+    font-size:14px;
+    margin-top:8px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:600px){
+
+    .authCard{
+        width:100% !important;
+        padding:25px !important;
+    }
+
+    .authTitle{
+        font-size:30px;
+    }
+
+    .switchButtons{
+        flex-direction:column;
+    }
+
+}

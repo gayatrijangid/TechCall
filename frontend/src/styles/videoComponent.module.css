@@ -1,0 +1,292 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.roomTitle{
+    color: #7c3aed !important;
+}
+
+/* MAIN CONTAINER */
+
+.meetVideoContainer{
+    display: flex;
+    min-height: 100vh;
+    background: #020617;
+    color: white;
+    position: relative;
+}
+
+/* LEFT VIDEO SECTION */
+
+
+  .videoSection{
+    width:70%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* RIGHT CHAT + EDITOR SECTION */
+
+.rightSection{
+    width:35%;
+    background:#0f172a;
+    padding:20px;
+    border-left:1px solid #1e293b;
+}
+/* OWNER VIDEO */
+
+.meetUserVideo{
+    width: 380px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid white;
+    background: black;
+}
+
+/* REMOTE VIDEOS */
+
+ .conferenceView{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Participant Videos */
+.remoteVideo{
+    width: 250px;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+    background: black;
+    border: 2px solid rgba(255,255,255,0.15);
+}
+
+/* CHAT SECTION */
+
+.chatRoom{
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+    
+}
+
+.chattingDisplay{
+    height: 300px;
+    overflow-y: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.messageBox{
+    background: #334155;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    
+}
+
+.chattingArea{
+    display: flex;
+    gap: 10px;
+    
+    
+}
+
+.chattingArea input{
+    flex: 1;
+    color:white;
+}
+.roomTitle{
+    text-align:center;
+    margin-bottom:20px;
+    color:#e2e8f0;
+}
+/* EDITOR */
+
+.editorContainer{
+    background: #111827;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #374151;
+}
+
+.editorHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #1e293b;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.editorHeader select{
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+/* BUTTONS */
+
+.buttonContainers{
+    position: fixed;
+    bottom: 20px;
+    left: 32%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+    border-radius: 20px;
+    z-index: 999;
+    flex-wrap: wrap;
+}
+
+/* LOBBY */
+.lobbyTextField{
+    width: 320px;
+    background: rgba(249, 249, 249, 0.8);
+    border-radius: 12px;
+}
+.lobbyContainer{
+    min-height: 100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    gap:20px;
+
+    background:
+    radial-gradient(circle at top,#7c3aed33,#020617);
+
+    color:white;
+}
+
+.lobbyVideo{
+    width: 400px;
+    max-width: 90%;
+    border-radius: 20px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 900px){
+    
+
+    .meetVideoContainer{
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    .videoSection{
+        width: 100%;
+        padding: 15px;
+        padding-bottom: 120px;
+    }
+
+    
+
+    .conferenceView{
+        justify-content: center;
+    }
+
+    .meetUserVideo{
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .remoteVideo{
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .buttonContainers{
+        width: 90%;
+        left: 50%;
+        bottom: 10px;
+        justify-content: center;
+        gap: 10px;
+        
+    }
+
+    .chattingDisplay{
+        height: 250px;
+
+    }
+
+    .editorHeader{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .chattingArea{
+        flex-direction: column;
+        
+    }
+
+    .chattingArea button{
+        width: 100%;
+        
+    }
+}
+@media (max-width:768px){
+
+    .meetVideoContainer{
+        flex-direction:column;
+    }
+
+    .videoSection{
+        width:100%;
+    }
+
+    .rightSection{
+        width:100%;
+        padding:15px;
+        box-sizing:border-box;
+    }
+    .buttonContainers{
+    position: sticky;
+    bottom: 10px;
+    left: auto;
+    transform: none;
+    width: 95%;
+    margin: 15px auto;
+    justify-content: center;
+    gap: 10px;
+    z-index: 100;
+}
+
+}
+.runBtn{
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #7c3aed;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.outputBox{
+    margin-top: 15px;
+    background: #111827;
+    color: #22c55e;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 100px;
+    overflow-x: auto;
+}
