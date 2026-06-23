@@ -17,6 +17,7 @@ import axios from "axios";
 import CodeEditor from '../components/CodeEditor';
 import VideoSection from "../components/VideoSection";
 import ChatBox from "../components/ChatBox";
+import { useNavigate } from "react-router-dom";
 import {
     peerConfigConnections,
     black,
@@ -416,7 +417,7 @@ console.log(
     let handleScreen = () => {
         setScreen(!screen);
     }
-
+    const navigate = useNavigate();
     let handleEndCall = () => {
 
     try {
@@ -441,7 +442,7 @@ console.log(
 
     }
 
-    window.location.href = "/home"
+    navigate("/home");
 }
 
     let openChat = () => {
