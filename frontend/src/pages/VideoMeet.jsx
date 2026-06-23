@@ -22,6 +22,7 @@ import {
     black,
     silence
 } from "../services/webRTCService";
+import server from '../environment';
 
 
 
@@ -487,7 +488,7 @@ console.log(
 
             const response = await axios.post(
 
-                "http://localhost:8000/run",
+               ` ${server}/run`,
 
                 {
                     code
